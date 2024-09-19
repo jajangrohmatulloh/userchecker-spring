@@ -5,9 +5,10 @@ import java.util.List;
 import lombok.Getter;
 import lombok.Setter;
 
-@Setter
 @Getter
-public class UserResponse {
+@Setter
+public class MatchingLogicRequest {
 
-    private List<String> users;
+    private String fullName;
+    private List<String> DBFullNames;
 }

@@ -7,6 +7,7 @@ import org.springframework.web.client.RestTemplate;
 import com.jajangrohmatulloh.userchecker.model.UserRequest;
 import com.jajangrohmatulloh.userchecker.model.UserResponse;
 
+
 @Service
 public class UserService {
 

@@ -1,16 +1,12 @@
 package com.jajangrohmatulloh.userchecker.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
+import lombok.Getter;
 import lombok.Setter;
 
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
+@Getter
 public class WebResponse {
-    
+
     private String status;
 
     private String result;

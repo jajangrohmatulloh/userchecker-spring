@@ -4,8 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import com.jajangrohmatulloh.userchecker.model.MatchingLogicRequest;
 import com.jajangrohmatulloh.userchecker.model.MatchingLogicResponse;
-import com.jajangrohmatulloh.userchecker.model.UserResponse;
 
 @Service
 public class MatchingLogicService {
@@ -15,7 +15,8 @@ public class MatchingLogicService {
     @Autowired
     private RestTemplate restTemplate;
 
-    public MatchingLogicResponse getFullNameScores(UserResponse request) {
+    public MatchingLogicResponse getFullNameScores(MatchingLogicRequest request) {
+
         MatchingLogicResponse response = restTemplate.postForObject(url, request, MatchingLogicResponse.class);
 
         return response;
