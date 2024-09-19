@@ -45,18 +45,18 @@ public class Controller {
 
         List<String> decisions = decisionResponse.getDecisions();
 
-        WebResponse webResponse = new WebResponse();
-
+        WebResponse.Data data = new WebResponse.Data();
         if (decisions.contains("AUTOMATCH")) {
-            webResponse.setResult("AUTOMATCH");
+            data.setResult("AUTOMATCH");
         } else if (decisions.contains("AMBIGUOUS")) {
-            webResponse.setResult("CANNOT DETERMINE");
+            data.setResult("CANNOT DETERMINE");
         } else {
-            webResponse.setResult("CANNOT DETERMINE");
+            data.setResult("USER NOT DETECTED");
         }
 
-        System.out.println("Almost returning");
-        webResponse.setStatus("OK");
+        WebResponse webResponse = new WebResponse();
+        webResponse.setStatus("success");
+        webResponse.setData(data);
         return webResponse;
     }
 

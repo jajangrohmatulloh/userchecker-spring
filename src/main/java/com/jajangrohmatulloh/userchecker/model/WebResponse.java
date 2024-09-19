@@ -9,7 +9,14 @@ public class WebResponse {
 
     private String status;
 
-    private String result;
+    private Data data;
 
     private String message;
+
+    @Getter
+    @Setter
+    public static class Data {
+        private String result;
+    }
+
 }
