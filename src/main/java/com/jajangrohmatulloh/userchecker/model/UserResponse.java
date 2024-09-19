@@ -9,5 +9,5 @@ import lombok.Setter;
 @Getter
 public class UserResponse {
 
-    private List<String> users;
+    private List<String> DBFullNames;
 }

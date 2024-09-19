@@ -37,7 +37,7 @@ public class Controller {
 
         MatchingLogicRequest matchingLogicRequest = new MatchingLogicRequest();
         matchingLogicRequest.setFullName(request.getFullName());
-        matchingLogicRequest.setDBFullNames(userResponse.getUsers());
+        matchingLogicRequest.setDBFullNames(userResponse.getDBFullNames());
 
         MatchingLogicResponse matchingLogicResponse = matchingLogicService.getFullNameScores(matchingLogicRequest);
 
